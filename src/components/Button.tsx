@@ -20,8 +20,6 @@ export function ButtonComponent({ iconName, title, selected, ...rest }: ButtonPr
 
 export const Button = memo(ButtonComponent, (prevProps, nextProps) => {
   if (
-    prevProps.title === nextProps.title &&
-    prevProps.iconName === nextProps.iconName &&
     prevProps.selected === nextProps.selected
   ) {
     return true;

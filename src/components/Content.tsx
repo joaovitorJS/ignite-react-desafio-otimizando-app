@@ -45,7 +45,7 @@ function ContentComponent(props: ContentProps) {
 }
 
 const areEqual = (prevProps: Readonly<React.PropsWithChildren<ContentProps>>, nextProps: Readonly<React.PropsWithChildren<ContentProps>>) => {
-  return Object.is(prevProps.movies, nextProps.movies);
+  return Object.is(prevProps.movies, nextProps.movies) && Object.is(prevProps.selectedGenre, nextProps.selectedGenre);
 }
 
 export const Content = memo(ContentComponent, areEqual);
